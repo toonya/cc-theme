@@ -644,7 +644,7 @@ a {
 	color: #fff !important;
 }
 
-.post.hentry {
+.post.hentry, .type-feature.hentry, .type-value.hentry, .type-testimonial.hentry, .type-portfolio.hentry, .type-page.hentry  {
 	margin-bottom: 0;
 	border: none;
 }

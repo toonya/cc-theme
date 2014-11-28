@@ -56,7 +56,7 @@
 				<a class="social-facebook" href="https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>" target="_blank"><i class="icon-facebook"></i></a>
 				<a class="social-google-plus" href="https://plus.google.com/share?url=<?php the_permalink(); ?>" target="_blank"><i class="icon-google-plus"></i></a>
 			</div> --><!-- .entry-social -->
-			<div class="read-more">
+			<!-- <div class="read-more">
 		<?php if ( !is_single() ) { ?>
 			
 				<a href="<?php the_permalink(); ?>" rel="bookmark"><i class="icon-chevron-right"></i></a>
@@ -65,7 +65,7 @@
 					<?php next_post_link('%link', '<i class="icon-chevron-left"></i>', 0); ?>
 					<?php previous_post_link('%link', '<i class="icon-chevron-right"></i>', 0); ?> 					 
 				<?php } ?>
-			</div><!-- .read-more -->
+			</div> -->
 		</div><!-- .entry-bottom -->
 	
 	<div class="clear"></div>
