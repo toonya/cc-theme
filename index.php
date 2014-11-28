@@ -44,7 +44,7 @@
 				    //$more_link = get_post_meta(get_the_ID(), 'tj_feature_more_link', TRUE);				    
 				?>	
 				<div class="feature-block <?php if($feature_count%3==0) { echo "last-feature"; } ?>">
-					<a href="<?php the_permalink(); ?>">
+					<a href="<?php if(get_page_by_title( '服务' )) echo get_permalink( get_page_by_title( '服务' ) ); ?>">
 					<?php if($has_icon <> '') { echo '<img class="entry-thumb" src="'.$has_icon.'" alt="';the_title();echo '"/>'; } ?>			
 					<h1 class="entry-title"><?php the_title(); ?></h1>
 					<p><?php switch (pll_current_language()) {
@@ -91,8 +91,39 @@
 		<div id="home-work">
 		<div class="container">
 			<div class="section-desc">
-				<h3 class="section-title"><?php echo (get_option($shortname.'_home_portfolio_heading')); ?></h3>			
-				<p><?php echo get_option($shortname.'_home_portfolio_desc'); ?></p>
+				<h3 class="section-title">
+				<?php switch (pll_current_language()) {
+						case 'en':
+							echo 'Community';
+							break;
+						
+						default:
+							echo '社区';
+							break;
+					}?>
+				</h3>			
+				<p>
+				<?php switch (pll_current_language()) {
+						case 'en':
+							echo 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla, eius.';
+							break;
+						
+						default:
+							echo '博客，仅音译，它的正式名称为网络日志；又音译为部落格或部落阁等，是一种通常由个人管理、不定期张贴新的文章的网站。';
+							break;
+					}?>
+				</p>
+				<div class="more-button"><a href="<?php if(get_page_by_title( '分享' )) echo get_permalink( get_page_by_title( '分享' ) ); ?>">
+				<?php switch (pll_current_language()) {
+						case 'en':
+							echo 'Community Share';
+							break;
+						
+						default:
+							echo '社区分享';
+							break;
+					}?>
+				</a></div>
 			</div><!-- .section-desc -->
 			<div class="section-content">
 				<?php
@@ -130,8 +161,39 @@
 		<div id="home-posts">
 			<div class="container">
 			<div class="section-desc">
-				<h3 class="section-title"><?php echo (get_option($shortname.'_home_posts_heading')); ?></h3>			
-				<p><?php echo get_option($shortname.'_home_posts_desc'); ?></p>
+				<h3 class="section-title">
+				<?php switch (pll_current_language()) {
+						case 'en':
+							echo 'Gene';
+							break;
+						
+						default:
+							echo '基因';
+							break;
+					}?>
+				</h3>			
+				<p>
+				<?php switch (pll_current_language()) {
+						case 'en':
+							echo 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla, eius.';
+							break;
+						
+						default:
+							echo '博客，仅音译，它的正式名称为网络日志；又音译为部落格或部落阁等，是一种通常由个人管理、不定期张贴新的文章的网站。';
+							break;
+					}?>
+				</p>
+				<div class="more-button"><a href="<?php if(get_page_by_title( '基因' )) echo get_permalink( get_page_by_title( '基因' ) ); ?>">
+				<?php switch (pll_current_language()) {
+						case 'en':
+							echo 'Read More';
+							break;
+						
+						default:
+							echo '浏览更多';
+							break;
+					}?>
+				</a></div>
 			</div><!-- .section-desc -->			
 			<div class="section-content">
 						<?php
@@ -154,7 +216,15 @@
 									<h1 class="entry-title"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
 										
 									<div class="entry-excerpt">
-										<?php tj_content_limit('100'); ?>
+										<?php switch (pll_current_language()) {
+											case 'en':
+												echo wp_trim_words( get_the_content(), 20 );
+												break;
+											
+											default:
+												echo wp_trim_words( get_the_content(), 50 );
+												break;
+										}?>
 									</div><!-- .entry-excerpt -->
 									
 								<div class="clear"></div>
@@ -178,8 +248,17 @@
 	?>		
 	
 		<div id="home-testimonials">
-		
-		<div class="block-heading"><?php echo get_option($shortname.'_home_testimonials_heading'); ?></div>
+		<div class="block-heading">
+		<?php switch (pll_current_language()) {
+						case 'en':
+							echo 'Trusted by <strong>12,309</strong> happy customers';
+							break;
+						
+						default:
+							echo '12309 位客户信任我们';
+							break;
+					}?>
+		</div>
 		
 		<div class="container clearfix">
 				<?php
@@ -188,17 +267,27 @@
 					    'posts_per_page' => 10
 					));
 					if (have_posts()) : while (have_posts()) : the_post();
-				    $author_name = get_post_meta(get_the_ID(), 'tj_testimonial_author_name', TRUE);
-				    $site_name = get_post_meta(get_the_ID(), 'tj_testimonial_site_name', TRUE);
-				    $site_url = get_post_meta(get_the_ID(), 'tj_testimonial_site_url', TRUE);				
+				    // $author_name = get_post_meta(get_the_ID(), 'tj_testimonial_author_name', TRUE);
+				    // $site_name = get_post_meta(get_the_ID(), 'tj_testimonial_site_name', TRUE);
+				    // $site_url = get_post_meta(get_the_ID(), 'tj_testimonial_site_url', TRUE);				
 				?>
 				
 					<article id="testimonial<?php the_ID(); ?>" class="testimonial">
 						<div class="testimonial-content">
-							<blockquote><?php the_content(); ?></blockquote>
+							<blockquote><p>
+							<?php switch (pll_current_language()) {
+								case 'en':
+									echo wp_trim_words( get_the_content(), 20 );
+									break;
+								
+								default:
+									echo wp_trim_words( get_the_content(), 50 );
+									break;
+							}?>
+							</p></blockquote>
 						</div><!-- .testimonial-content -->
 						<div class="testimonial-author">
-							<span class="author-name"><?php echo $author_name; ?></span> <span class="site-url">&#8211; <a href="<?php echo $site_url; ?>" target="_blank"><?php echo $site_name; ?></a></span>
+							<span class="author-name"><?php the_title(); ?></span> <span class="site-url">&#8211;</span>
 						</div><!-- .testimonial-author -->
 					</article><!-- .testimonial -->
 					
@@ -212,7 +301,7 @@
 					    'posts_per_page' => 10
 					));
 					if (have_posts()) : while (have_posts()) : the_post();						
-				    $author_avatar = get_post_meta(get_the_ID(), 'tj_testimonial_author_avatar', TRUE);								    								    
+				    $author_avatar = wp_get_attachment_image_src( get_post_thumbnail_id(get_the_ID()), 'large')[0];								    								    
 				?>
 					<li><a href="#testimonial<?php the_ID(); ?>"><img class="author-avatar" src="<?php echo $author_avatar; ?>" alt="<?php the_title(); ?>"/></a></li>
 				<?php endwhile; else: ?>

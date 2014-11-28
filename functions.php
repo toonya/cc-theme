@@ -24,6 +24,26 @@ require_once('includes/meta-testimonials.php');
 
 require_once('includes/get-plugins.php');
 
+function aca_theme_setup() {
+
+	load_theme_textdomain( 'aca', get_template_directory() . '/languages' );
+
+	register_nav_menus(
+		array(
+		  'footer-menu' => __( '页面底部' ),
+		)
+	);
+
+	add_theme_support( 'post-thumbnails' );
+
+    add_theme_support( 'html5', array( 'comment-list', 'comment-form', 'search-form' ) );
+
+    set_post_thumbnail_size( 672, 372, true );
+	add_image_size( 'aca-full-width', 1038, 576, true );
+}
+
+add_action( 'after_setup_theme', 'aca_theme_setup' );
+
 function coolwp_remove_open_sans_from_wp_core() {
     wp_deregister_style( 'open-sans' );
     wp_register_style( 'open-sans', false );

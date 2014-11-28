@@ -568,3 +568,78 @@ button:hover,
 #responsive-menu {
 	display: none;
 }
+
+.ty-footer-nav {
+
+}
+.ty-footer-menu {
+	width: 60%;
+	margin: 0 auto 12px;
+	padding-top: 12px;
+}
+.ty-footer-menu li {
+	display: inline-block;
+	margin-right: 24px;
+	text-align: center;
+	width: 20%;
+}
+
+.ty-banner {
+	max-height: 480px;
+	overflow: hidden;
+}
+
+.page-template #home-features .feature-block {
+	box-sizing: border-box;
+	padding: 24px;
+	background: #fff;
+}
+
+.ty-thumbnail {
+	padding: 24px;
+	background-color: #fff;
+}
+
+.ty-thumbnail img {
+	margin: 0 auto;
+}
+
+.ty-title {
+	font-size: 28px;
+	line-height: 102px;
+	text-align: left;
+	border-top: 1px solid rgba(0,0,0,.1);
+	margin-top: 12px;
+}
+
+.ty-services-content ul li {
+	display: block;
+	line-height: 36px;
+	border-top: 1px solid #aaa;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

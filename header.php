@@ -64,9 +64,9 @@
 					} else echo ($primaryNav); 
 				?>
 				
-				<ul class="header-icons">
+				<!-- <ul class="header-icons">
 					<li><a id="search-button" href="#"><i class="icon-search"></i></a></li>
-				</ul>
+				</ul> -->
 				
 				<div class="btn-nav-right">
 					<?php _e('Menu', 'junkie'); ?> 
@@ -78,11 +78,11 @@
 		
 	</header><!-- #header -->
 	
-	<div id="header-search">
+	<!-- <div id="header-search">
 		<div class="container">
-			<?php get_search_form(); ?>
-		</div><!-- .container -->
-	</div><!-- #header-search -->
+			<?php // get_search_form(); ?>
+		</div>
+	</div> -->
 
 	<nav id="mobile-menu">
 		<div class="container">
