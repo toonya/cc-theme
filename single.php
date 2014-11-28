@@ -2,7 +2,19 @@
 
 	<div class="page-header">
 	
-		<h1 class="page-title container"><?php _e('Blog','junkie'); ?></h1>
+		<h1 class="page-title container">
+			<?php switch (pll_current_language()) {
+				case 'en':
+					echo 'Gene';
+					// echo wp_trim_words( get_the_content(), 20 );
+					break;
+				
+				default:
+					echo '基因';
+					// echo wp_trim_words( get_the_content(), 50 );
+					break;
+			}?>
+		</h1>
 		
 	</div><!-- .page-header -->
 
@@ -16,7 +28,7 @@
 				
 				<?php if(get_option($shortname.'_show_post_comments') == 'on') { ?>
 				
-			  		<?php comments_template('', true);  ?>
+			  		<?php //comments_template('', true);  ?>
 			  		
 			  	<?php } ?>
 			  		

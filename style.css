@@ -605,7 +605,7 @@ button:hover,
 	text-align: left;
 }
 
-[cur-language="zh"] .ty-services-content p, [cur-language="zh"] .share-describe {
+[cur-language="zh"] .ty-services-content p, [cur-language="zh"] .share-describe, [cur-language="zh"] article.post p {
 	text-indent: 2em;
 }
 
@@ -642,6 +642,11 @@ a {
 	background: #808CA3;
 	border: 1px solid #fff;
 	color: #fff !important;
+}
+
+.post.hentry {
+	margin-bottom: 0;
+	border: none;
 }
 
 
