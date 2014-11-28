@@ -1,6 +1,16 @@
 <?php get_header(); ?>
-<?php layerslider(3, 'homepage'); ?> <!--// 在主页显示第一个-->
 
+<?php switch (pll_current_language()) {
+	case 'en':
+		layerslider(3, 'homepage');
+		// echo wp_trim_words( get_the_content(), 20 );
+		break;
+	
+	default:
+		layerslider(7, 'homepage');
+		// echo wp_trim_words( get_the_content(), 50 );
+		break;
+}?>
 
 	<?php // Home Slider
 		if ( is_active_sidebar( 'home-slider' ) ) : 
