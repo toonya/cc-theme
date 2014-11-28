@@ -34,6 +34,40 @@ function tj_create_post_type_feature()
 	  register_post_type(__( 'feature', 'junkie' ),$args);
 }
 
+//Add Mini Features Post Type
+
+function tj_create_post_type_value()
+{
+	$labels = array(
+		'name' => __( '价值','junkie'),
+		'singular_name' => __( 'values','junkie' ),
+		'add_new' => __('添加','junkie'),
+		'add_new_item' => __('添加新的价值','junkie'),
+		'edit_item' => __('编辑价值','junkie'),
+		'new_item' => __('新的价值','junkie'),
+		'view_item' => __('查看价值','junkie'),
+		'search_items' => __('搜索价值','junkie'),
+		'not_found' =>  __('没有发现价值','junkie'),
+		'not_found_in_trash' => __('没有在回收站发现价值','junkie'),
+		'parent_item_colon' => ''
+	  );
+
+	  $args = array(
+		'labels' => $labels,
+		'public' => true,
+		'exclude_from_search' => true,
+		'publicly_queryable' => true,
+		'show_ui' => true,
+		'query_var' => true,
+		'capability_type' => 'post',
+		'hierarchical' => false,
+		'menu_position' => null,
+		'supports' => array('title','editor','thumbnail')
+	  );
+
+	  register_post_type(__( 'value', 'junkie' ),$args);
+}
+
 //Add Testimonial Post Type
 
 function tj_create_post_type_testimonial()
@@ -142,6 +176,7 @@ function tj_portfolio_custom_columns($column){
 add_action( 'init', 'tj_create_post_type_portfolio' );
 add_action( 'init', 'tj_create_post_type_feature' );
 add_action( 'init', 'tj_create_post_type_testimonial' );
+add_action( 'init', 'tj_create_post_type_value' );
 
 
 add_action( 'init', 'tj_build_taxonomies', 0 );

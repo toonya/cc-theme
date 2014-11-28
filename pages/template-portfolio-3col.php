@@ -6,21 +6,38 @@ Template Name: Portfolio 3 Columns
 
 <?php get_header(); ?>
 
-	<div class="page-header">
+	<!-- <div class="page-header">
 	
 		<h1 class="page-title container"><?php _e('Portfolio', 'junkie'); ?></h1>
 		
-	</div><!-- .page-header -->
+	</div> --><!-- .page-header -->
+	
+	<?php $ty_banner = wp_get_attachment_image_src( get_post_thumbnail_id(get_the_ID()), 'full')[0];
+	if(!empty($ty_banner)):;?>
+	<div class="ty-banner">
+		<div class="ty-banner-inner">
+			<img src="<?php echo esc_url($ty_banner); ?>" alt="">
+		</div>
+	</div>
+	<?php endif;?>
 
 	<div id="main" class="clearfix">
+
+		<div class="share-describe">
+			<?php while ( have_posts() ) : the_post(); ?>
+		
+				<?php the_content(); ?>
+			  		
+			<?php endwhile; ?>
+		</div>
 	
 		<div id="portfolio" class="clearfix">
 		
-		    <div class="portfolio-header">
+		    <!-- <div class="portfolio-header">
 		        <ul id="sort-by" class="clearfix">
 		            <?php wp_list_categories('taxonomy=portfolio-type&orderby=name&order=DESC&hide_empty=0&hierarchical=1&title_li='); ?>
-		        </ul><!-- #sort-by -->
-		    </div><!-- .portfolio-header -->
+		        </ul>
+		    </div> --><!-- .portfolio-header -->
 		    
 	        <ul class="ourHolder">
 	        

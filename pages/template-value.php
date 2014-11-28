@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: 服务
+Template Name: 价值
 */
 ?>
 
@@ -26,7 +26,7 @@ Template Name: 服务
 		<div class="container clearfix">
 			<?php
 			    query_posts( array(
-				'post_type' => 'feature',
+				'post_type' => 'value',
 				'posts_per_page' => get_option($shortname.'_home_features_num')
 				));				
 				$feature_count = 1; 

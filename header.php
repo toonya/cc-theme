@@ -24,7 +24,7 @@
 <![endif]-->
 <?php wp_head(); ?>
 </head>
-<body <?php body_class(); ?>>
+<body <?php body_class(); ?> cur-language="<?php echo pll_current_language(); ?>">
 
 	<header id="header">
 	

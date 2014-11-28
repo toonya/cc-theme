@@ -6,15 +6,24 @@ Template Name: Blog
 
 <?php get_header(); ?>
 	
-	<div class="page-header">
+	<!-- <div class="page-header">
 		
 		<div class="container">
 	
 			<h1 class="page-title"><?php the_title(); ?></h1>
 		
-		</div><!-- .container -->
+		</div>
 	
-	</div><!-- .page-header -->
+	</div> --><!-- .page-header -->
+
+	<?php $ty_banner = wp_get_attachment_image_src( get_post_thumbnail_id(get_the_ID()), 'full')[0];
+	if(!empty($ty_banner)):;?>
+	<div class="ty-banner">
+		<div class="ty-banner-inner">
+			<img src="<?php echo esc_url($ty_banner); ?>" alt="">
+		</div>
+	</div>
+	<?php endif;?>
 	
 	<div id="main" class="clearfix">
 	

@@ -615,13 +615,52 @@ button:hover,
 .ty-services-content ul li {
 	display: block;
 	line-height: 36px;
-	border-top: 1px solid #aaa;
+	border-top: 1px solid #eee;
 }
 
+.ty-services-content {
+	color: #777;
+	text-align: left;
+}
 
+[cur-language="zh"] .ty-services-content p, [cur-language="zh"] .share-describe {
+	text-indent: 2em;
+}
 
+.share-describe {
+	margin-bottom: 24px;
+	font-size: 1em;
+	color: #aaa;
+}
 
+.footer-up {
+	background: #656F81;
+	padding: 48px 0;
+	color: #aaa;
+	text-align: center;
+}
 
+.footer-up p {
+	font-size: 2em;
+}
+
+a {
+	font-family:"Hiragino Sans GB","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif;
+}
+
+.footer-up a {
+	margin-top: 24px;
+	display: inline-block;
+	padding: 6px 24px;
+	border: 1px solid #eee;
+	color: #eee !important;
+}
+
+.footer-up a:hover {
+	background: #808CA3;
+	border: 1px solid #fff;
+	color: #fff !important;
+}
 
 
 
