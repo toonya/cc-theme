@@ -39,7 +39,8 @@
 					));				
 					$feature_count = 1; 
 					if (have_posts()) : while (have_posts()) : the_post(); 
-				    $has_icon = get_post_meta(get_the_ID(), 'tj_feature_icon', TRUE);
+				    $has_icon = wp_get_attachment_image_src( get_post_thumbnail_id(get_the_ID()), 'large')[0];
+				    //$has_icon = get_post_meta(get_the_ID(), 'tj_feature_icon', TRUE);
 				    //$more_link = get_post_meta(get_the_ID(), 'tj_feature_more_link', TRUE);				    
 				?>	
 				<div class="feature-block <?php if($feature_count%3==0) { echo "last-feature"; } ?>">
