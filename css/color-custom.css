@@ -13,7 +13,7 @@ a:hover,
 .hentry:hover .entry-title a,
 .junkie-pagination .current,
 .junkie-pagination a:hover {
-	color: #40bac8;
+	color: #00c0f3;
 }
 /* Background */
 #home-slider,
@@ -26,13 +26,13 @@ button, .btn,
 .form-submit input,
 .contact-form #submit,
 #commentform .form-submit #submit {
-	background: #40bac8;
+	background: #00c0f3;
 }
 /* Border Color */
 .nav li a:hover,
 .nav li.first a,
 .nav .current_page_item a {
-	border-color: #40bac8;
+	border-color: #00c0f3;
 }
 /* Green Background */
 #home-posts .section-desc .more-button a:link,

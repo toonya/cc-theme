@@ -605,7 +605,7 @@ button:hover,
 	text-align: left;
 }
 
-[cur-language="zh"] .ty-services-content p, [cur-language="zh"] .share-describe, [cur-language="zh"] article.post p {
+[cur-language="zh"] .ty-services-content p, [cur-language="zh"] .share-describe, [cur-language="zh"] article.post p, [cur-language="zh"] article.type-page p {
 	text-indent: 2em;
 }
 
@@ -649,9 +649,13 @@ a {
 	border: none;
 }
 
+#logo {
+	margin-top: 22px;
+}
 
-
-
+.nav li a {
+	font-size: 16px;
+}
 
 
 
