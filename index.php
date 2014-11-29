@@ -45,7 +45,8 @@
 				<?php
 				    query_posts( array(
 					'post_type' => 'feature',
-					'posts_per_page' => get_option($shortname.'_home_features_num')
+					'posts_per_page' => get_option($shortname.'_home_features_num'),
+					'order'          => 'asc'
 					));				
 					$feature_count = 1; 
 					if (have_posts()) : while (have_posts()) : the_post(); 
