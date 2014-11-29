@@ -166,6 +166,14 @@
 		display: block;
 		float: none !important;
 	}
+
+	.ty-footer-menu li {
+		display: block;
+		text-align: center;
+		width: 100%;
+		margin: 12px auto;
+		text-transform:uppercase;
+	}
 }
 
 /* Mobile Landscape Size to Tablet Portrait (devices and browsers) */

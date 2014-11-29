@@ -106,6 +106,8 @@ function my_menu_pages() {
 	//remove_submenu_page('users.php','user-new.php');
 	//remove_submenu_page('upload.php','upload.php');
 	//remove_submenu_page('upload.php','media-new.php');
+
+    add_menu_page( '导航菜单', '导航菜单', 'manage_options', 'nav-menus.php', '', '', 99 );
 }
 
 ?>
