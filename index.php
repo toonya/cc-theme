@@ -34,7 +34,7 @@
 				<h1 class="ty-section-title">
 					<?php switch (pll_current_language()) {
 						case 'en':
-							echo 'Features';
+							echo 'Services';
 							break;
 						
 						default:
